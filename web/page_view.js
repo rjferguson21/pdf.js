@@ -552,12 +552,12 @@ var PageView = function pageView(container, id, scale, defaultViewport,
     var canvas = document.createElement('canvas');
     canvas.width = Math.floor(viewport.width) * PRINT_OUTPUT_SCALE;
     canvas.height = Math.floor(viewport.height) * PRINT_OUTPUT_SCALE;
-    canvas.style.width = (PRINT_OUTPUT_SCALE * viewport.width) + 'pt';
-    canvas.style.height = (PRINT_OUTPUT_SCALE * viewport.height) + 'pt';
-    var cssScale = 'scale(' + (1 / PRINT_OUTPUT_SCALE) + ', ' +
-                              (1 / PRINT_OUTPUT_SCALE) + ')';
-    CustomStyle.setProp('transform' , canvas, cssScale);
-    CustomStyle.setProp('transformOrigin' , canvas, '0% 0%');
+    canvas.style.width = (PRINT_OUTPUT_SCALE * viewport.width) + 'px';
+    canvas.style.height = (PRINT_OUTPUT_SCALE * viewport.height) + 'px';
+    // var cssScale = 'scale(' + (1 / PRINT_OUTPUT_SCALE) + ', ' +
+    //                           (1 / PRINT_OUTPUT_SCALE) + ')';
+    // CustomStyle.setProp('transform' , canvas, cssScale);
+    // CustomStyle.setProp('transformOrigin' , canvas, '0% 0%');
 
     var printContainer = document.getElementById('printContainer');
     var canvasWrapper = document.createElement('div');
